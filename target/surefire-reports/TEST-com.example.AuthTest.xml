@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="com.example.LoginTest" time="12.524" tests="5" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="com.example.AuthTest" time="12.978" tests="5" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="26"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -60,38 +60,38 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.class.version" value="70.0"/>
   </properties>
-  <testcase name="shouldFailLoginWithEmptyCredentials" classname="com.example.LoginTest" time="3.823">
-    <system-err><![CDATA[Sep 17, 2026 11:39:55 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+  <testcase name="shouldFailLoginWithEmptyCredentials" classname="com.example.AuthTest" time="1.791">
+    <system-err><![CDATA[Sep 17, 2026 11:40:06 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 153
-Sep 17, 2026 11:39:55 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+Sep 17, 2026 11:40:06 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
 WARNING: Unable to find version of CDP to use for 153.0.8010.48. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.35.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 ]]></system-err>
   </testcase>
-  <testcase name="shouldFailLoginWithEmptyPassword" classname="com.example.LoginTest" time="1.994">
-    <system-err><![CDATA[Sep 17, 2026 11:39:57 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+  <testcase name="shouldFailLoginWithEmptyPassword" classname="com.example.AuthTest" time="3.765">
+    <system-err><![CDATA[Sep 17, 2026 11:40:07 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 153
-Sep 17, 2026 11:39:57 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+Sep 17, 2026 11:40:07 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
 WARNING: Unable to find version of CDP to use for 153.0.8010.48. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.35.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 ]]></system-err>
   </testcase>
-  <testcase name="shouldLoginSuccessfully" classname="com.example.LoginTest" time="2.288">
-    <system-err><![CDATA[Sep 17, 2026 11:39:59 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+  <testcase name="shouldLoginSuccessfully" classname="com.example.AuthTest" time="3.338">
+    <system-err><![CDATA[Sep 17, 2026 11:40:11 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 153
-Sep 17, 2026 11:39:59 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+Sep 17, 2026 11:40:11 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
 WARNING: Unable to find version of CDP to use for 153.0.8010.48. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.35.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 ]]></system-err>
   </testcase>
-  <testcase name="shouldFailLoginWithInvalidCredentials" classname="com.example.LoginTest" time="2.239">
-    <system-err><![CDATA[Sep 17, 2026 11:40:01 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+  <testcase name="shouldFailLoginWithInvalidCredentials" classname="com.example.AuthTest" time="2.127">
+    <system-err><![CDATA[Sep 17, 2026 11:40:15 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 153
-Sep 17, 2026 11:40:01 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+Sep 17, 2026 11:40:15 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
 WARNING: Unable to find version of CDP to use for 153.0.8010.48. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.35.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 ]]></system-err>
   </testcase>
-  <testcase name="shouldFailLoginWithEmptyUsername" classname="com.example.LoginTest" time="2.177">
-    <system-err><![CDATA[Sep 17, 2026 11:40:04 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+  <testcase name="shouldFailLoginWithEmptyUsername" classname="com.example.AuthTest" time="1.95">
+    <system-err><![CDATA[Sep 17, 2026 11:40:17 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 153
-Sep 17, 2026 11:40:04 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
+Sep 17, 2026 11:40:17 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$4
 WARNING: Unable to find version of CDP to use for 153.0.8010.48. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.35.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 ]]></system-err>
   </testcase>
