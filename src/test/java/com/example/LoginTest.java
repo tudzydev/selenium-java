@@ -42,4 +42,71 @@ class LoginTest {
 
         assertEquals("Welcome!", heading);
     }
+
+    @Test 
+    void shouldFailLoginWithInvalidCredentials() {
+        driver.get("https://seleniumbase.io/simple/login");
+
+        driver.findElement(By.id("username"))
+                .sendKeys("invalid_user");
+
+        driver.findElement(By.id("password"))
+                .sendKeys("wrong_pass");
+
+        driver.findElement(By.id("log-in"))
+                .click();
+
+        String errorMessage = driver.findElement(By.id("top_message"))
+                .getText();
+
+        assertEquals("Invalid Username!", errorMessage);
+    }
+
+    @Test
+    void shouldFailLoginWithEmptyCredentials() {
+        driver.get("https://seleniumbase.io/simple/login");
+
+        // กดปุ่ม Sign in ทันทีโดยไม่กรอก Username และ Password
+        driver.findElement(By.id("log-in"))
+                .click();
+
+        String errorMessage = driver.findElement(By.id("top_message"))
+                .getText();
+
+        assertEquals("The Username is Required!", errorMessage);
+    }
+
+    @Test 
+    void shouldFailLoginWithEmptyPassword() {
+        driver.get("https://seleniumbase.io/simple/login");
+
+        driver.findElement(By.id("username"))
+                .sendKeys("demo_user");
+
+        // กดปุ่ม Sign in โดยไม่กรอก Password
+        driver.findElement(By.id("log-in"))
+                .click();
+
+        String errorMessage = driver.findElement(By.id("top_message"))
+                .getText();
+
+        assertEquals("The Password is Required!", errorMessage);
+    }
+
+    @Test 
+    void shouldFailLoginWithEmptyUsername() {
+        driver.get("https://seleniumbase.io/simple/login");
+
+        driver.findElement(By.id("password"))
+                .sendKeys("secret_pass");
+
+        // กดปุ่ม Sign in โดยไม่กรอก Username
+        driver.findElement(By.id("log-in"))
+                .click();
+
+        String errorMessage = driver.findElement(By.id("top_message"))
+                .getText();
+
+        assertEquals("The Username is Required!", errorMessage);
+    }
 }
